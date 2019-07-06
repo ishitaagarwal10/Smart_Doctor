@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+
+    <title>Welcome to DocTalk</title>
+    
+     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/business-casual.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link href="stylesheets/dash.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+ </head> 
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container pull-left">
+        <img border="0" src="img/doc.png" width="40" height="60"><a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">DocTalk</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/main"><h3>Welcome to DOCTALK</h3>
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'en,bn,gu,hi,kn,ml,ta,te,ur'}, 'google_translate_element');}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </div>
+    </nav>
+    <div class="dashboard">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <ul class="dashboard-tabs">
+                <li>
+                    <a href="/profile" class="btn" aria-controls="profile" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <h4>Profile</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="/statistics" class="btn" aria-controls="statistics" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-time"></span>
+                        <h4>Statistics</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="/appointment" class="btn" aria-controls="appointment" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                        <h4>Appointment</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="/settings" class="btn" aria-controls="settings" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <h4>Settings</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contactus" class="btn" aria-controls="help" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-question-sign"></span>
+                        <h4>Help</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div></div>
+        <div class="container">
+            <br><br>
+        <center>
+            <button class="button" onclick="myFunction()">Result</button>
+            <br><br>
+            <p style="color:blue;font-size:20px;" id="demo"></p>
+            <hr>
+            <p style="color:green;font-size:18px;" id="demo1"></p>
+            </center>
+        </div>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "You have Urinary Tract Infection.";
+  document.getElementById("demo1").innerHTML = "Antibiotics usually are the first line treatment for urinary tract infections. Which drugs are prescribed and for how long depend on your health condition and the type of bacteria found in your urine. Drugs commonly recommended for simple UTIs include: 1) Trimethoprim/sulfamethoxazole (Bactrim, Septra, others) 2) Fosfomycin (Monurol) 3) Nitrofurantoin (Macrodantin, Macrobid) 4) Cephalexin (Keflex) 5) Ceftriaxone";
+  }
+</script>
+  </body>
+  </html>

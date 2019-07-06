@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+
+<h2>HTML Forms</h2>
+<section>
+<form action="testans" >
+  First name:<br>
+  <input type="text" id="firstname" name="firstname" value=<%= obj.firstname %>>
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" id="lastname" value=<%= obj.lastname %>>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+</section>
+
+<h1>search for a movie</h1>
+
+<form method="GET" action="/testsearch">
+    <input type="text" placeholder="search for movies" name="search">
+    <input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+update `count` set val=0; 
+update `flag` set val=0;
+update `ind` set val=0;
+update `ind1` set val=0;

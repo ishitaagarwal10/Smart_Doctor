@@ -1,1 +1,404 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               10.1.31-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win32
+-- HeidiSQL Version:             9.5.0.5196
+-- --------------------------------------------------------
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Dumping database structure for doctok
+CREATE DATABASE IF NOT EXISTS `doctok` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `doctok`;
+
+-- Dumping structure for table doctok.conclusion
+CREATE TABLE IF NOT EXISTS `conclusion` (
+  `conclusion_id` int(11) NOT NULL,
+  `conclusion_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`conclusion_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.conclusion: ~25 rows (approximately)
+/*!40000 ALTER TABLE `conclusion` DISABLE KEYS */;
+INSERT INTO `conclusion` (`conclusion_id`, `conclusion_name`) VALUES
+	(1, 'Abdominal Abscess'),
+	(2, 'Accute Appendicitis'),
+	(3, 'Viral fever'),
+	(4, 'Infective hepatitis'),
+	(5, 'Hepatitise B'),
+	(6, 'Viral Flu'),
+	(7, 'Dengue'),
+	(8, 'Chickengunya'),
+	(9, 'typhoid'),
+	(10, 'Respiratory Tract infection'),
+	(11, 'ASOM'),
+	(12, 'Ear Pain(CSOM)'),
+	(13, 'menigngitis'),
+	(14, 'Allergic Rhinitis'),
+	(15, 'Endocarditis'),
+	(16, 'Gastroenteritis'),
+	(17, 'Kidney Stones'),
+	(18, 'Urinary Tract infection'),
+	(19, 'Chicken Pox'),
+	(20, 'Cellulitis'),
+	(21, 'Boil'),
+	(22, 'Pharyngitis'),
+	(23, 'Laryngitis'),
+	(24, 'Migrane'),
+	(25, 'rheumatoid arthiritis');
+/*!40000 ALTER TABLE `conclusion` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.data
+CREATE TABLE IF NOT EXISTS `data` (
+  `sno` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date DEFAULT NULL,
+  `Temp` float DEFAULT NULL,
+  PRIMARY KEY (`sno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table doctok.data: ~0 rows (approximately)
+/*!40000 ALTER TABLE `data` DISABLE KEYS */;
+/*!40000 ALTER TABLE `data` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.diagnosis
+CREATE TABLE IF NOT EXISTS `diagnosis` (
+  `diag_id` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
+  `start_date` datetime NOT NULL,
+  `end_date` datetime NOT NULL,
+  `prevSym_code` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`diag_id`),
+  KEY `FK_diagnosis_patient` (`pid`),
+  CONSTRAINT `FK_diagnosis_patient` FOREIGN KEY (`pid`) REFERENCES `patient` (`pid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.diagnosis: ~0 rows (approximately)
+/*!40000 ALTER TABLE `diagnosis` DISABLE KEYS */;
+INSERT INTO `diagnosis` (`diag_id`, `pid`, `start_date`, `end_date`, `prevSym_code`) VALUES
+	(1, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '');
+/*!40000 ALTER TABLE `diagnosis` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.disease
+CREATE TABLE IF NOT EXISTS `disease` (
+  `dis_id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`dis_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.disease: ~0 rows (approximately)
+/*!40000 ALTER TABLE `disease` DISABLE KEYS */;
+/*!40000 ALTER TABLE `disease` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.exactcon
+CREATE TABLE IF NOT EXISTS `exactcon` (
+  `con_id` int(11) NOT NULL AUTO_INCREMENT,
+  `temp` varchar(50) DEFAULT '0',
+  `fever_type` varchar(50) DEFAULT '0',
+  `rashes` varchar(50) DEFAULT '0',
+  `persistent_tachicardia` varchar(50) DEFAULT '0',
+  `running_nose` varchar(50) DEFAULT '0',
+  `chills` varchar(50) DEFAULT '0',
+  `vomiting` varchar(50) DEFAULT '0',
+  `urine` varchar(50) DEFAULT '0',
+  `ache` varchar(50) DEFAULT '0',
+  `SoreEyes` varchar(50) DEFAULT '0',
+  `Appetite_loss` varchar(50) DEFAULT '0',
+  `neck_stiffness` varchar(50) DEFAULT '0',
+  `Loose_Motion` varchar(50) DEFAULT '0',
+  `Wt_Loss` varchar(50) DEFAULT '0',
+  `ear_pain` varchar(50) DEFAULT '0',
+  `sneeze` varchar(50) DEFAULT '0',
+  `abdominal` varchar(50) DEFAULT '0',
+  `Breathlessness` varchar(50) DEFAULT '0',
+  `cough` varchar(50) DEFAULT '0',
+  `focal_tenderness` varchar(50) DEFAULT '0',
+  `pain` varchar(50) DEFAULT '0',
+  `Blurred_Vision` varchar(50) DEFAULT '0',
+  `Erruption` varchar(50) DEFAULT '0',
+  `Hoarseness_Voice` varchar(50) DEFAULT '0',
+  `Swelled_Foot` varchar(50) DEFAULT '0',
+  `bradycardia` varchar(50) DEFAULT '0',
+  PRIMARY KEY (`con_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.exactcon: ~25 rows (approximately)
+/*!40000 ALTER TABLE `exactcon` DISABLE KEYS */;
+INSERT INTO `exactcon` (`con_id`, `temp`, `fever_type`, `rashes`, `persistent_tachicardia`, `running_nose`, `chills`, `vomiting`, `urine`, `ache`, `SoreEyes`, `Appetite_loss`, `neck_stiffness`, `Loose_Motion`, `Wt_Loss`, `ear_pain`, `sneeze`, `abdominal`, `Breathlessness`, `cough`, `focal_tenderness`, `pain`, `Blurred_Vision`, `Erruption`, `Hoarseness_Voice`, `Swelled_Foot`, `bradycardia`) VALUES
+	(1, '0', '3', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0'),
+	(2, '0', '2', '0', '0', '0', '0', '6', '0', '0', '0', '0', '0', '1', '0', '0', '0', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(3, '0', '5', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(4, '0', '1', '0', '0', '0', '0', '6', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(5, '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(6, '0', '2', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(7, '0', '5', '0', '0', '0', '0', '6', '0', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0'),
+	(8, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3', '0', '0', '0', '0', '0'),
+	(9, '2', '4', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1'),
+	(10, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0'),
+	(11, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(12, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(13, '0', '5', '0', '0', '0', '0', '6', '0', '2', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(14, '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(15, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0'),
+	(16, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(17, '0', '5', '0', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(18, '0', '5', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+	(19, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0'),
+	(20, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2', '0', '1', '0'),
+	(21, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2', '0', '0', '0'),
+	(22, '0', '5', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0'),
+	(23, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0'),
+	(24, '0', '0', '0', '0', '0', '0', '6', '0', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0'),
+	(25, '0', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3', '0', '0', '0', '0', '0');
+/*!40000 ALTER TABLE `exactcon` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.fever
+CREATE TABLE IF NOT EXISTS `fever` (
+  `type` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table doctok.fever: ~0 rows (approximately)
+/*!40000 ALTER TABLE `fever` DISABLE KEYS */;
+/*!40000 ALTER TABLE `fever` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.grpsymptoms
+CREATE TABLE IF NOT EXISTS `grpsymptoms` (
+  `grp_id` int(11) NOT NULL,
+  `Column 2` int(11) DEFAULT NULL,
+  PRIMARY KEY (`grp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.grpsymptoms: ~0 rows (approximately)
+/*!40000 ALTER TABLE `grpsymptoms` DISABLE KEYS */;
+/*!40000 ALTER TABLE `grpsymptoms` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.medication
+CREATE TABLE IF NOT EXISTS `medication` (
+  `mid_id` int(11) DEFAULT NULL,
+  `duration` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.medication: ~0 rows (approximately)
+/*!40000 ALTER TABLE `medication` DISABLE KEYS */;
+/*!40000 ALTER TABLE `medication` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.patient
+CREATE TABLE IF NOT EXISTS `patient` (
+  `pid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `gender` varchar(4) NOT NULL,
+  `age` int(11) NOT NULL,
+  `ph` varchar(45) NOT NULL DEFAULT '00000000',
+  `email_id` varchar(45) NOT NULL DEFAULT '0000000000',
+  `password` varchar(45) NOT NULL DEFAULT '0000000000',
+  `enrollment_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`pid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.patient: ~2 rows (approximately)
+/*!40000 ALTER TABLE `patient` DISABLE KEYS */;
+INSERT INTO `patient` (`pid`, `name`, `gender`, `age`, `ph`, `email_id`, `password`, `enrollment_date`) VALUES
+	(1, 'shantanu', 'male', 20, '123456789', 'abc@gmail.com', '0000000000', '2018-09-28 00:45:03'),
+	(2, 'abc', 'male', 20, '00000000', '0000000000', '0000000000', '2018-09-28 02:11:11');
+/*!40000 ALTER TABLE `patient` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.questions
+CREATE TABLE IF NOT EXISTS `questions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `qname` varchar(100) DEFAULT NULL,
+  `option` varchar(100) NOT NULL,
+  `option_code` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`,`option`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.questions: ~77 rows (approximately)
+/*!40000 ALTER TABLE `questions` DISABLE KEYS */;
+INSERT INTO `questions` (`id`, `qname`, `option`, `option_code`) VALUES
+	(1, 'Select the time of fever', 'Evening', '12'),
+	(1, 'Select the time of fever', 'General', '10'),
+	(1, 'Select the time of fever', 'Morning', '11'),
+	(2, 'Select the nature of fever', 'High Grade Fever(>103F)', '25'),
+	(2, 'Select the nature of fever', 'inconsistent/intermitted temperature range  ', '24'),
+	(2, 'Select the nature of fever', 'Low Grade Fever(<100.4F)', '21'),
+	(2, 'Select the nature of fever', 'Moderate Fever(>100.4F&<103F)', '22'),
+	(2, 'Select the nature of fever', 'no', '20'),
+	(2, 'Select the nature of fever', 'spiking/sudden change in temperature ', '23'),
+	(3, 'Do you have any rashes?', 'No rashes', '30'),
+	(3, 'Do you have any rashes?', 'Yes, I have rashes.', '31'),
+	(4, 'Do you have high and consistent heart rate?', 'No', '40'),
+	(4, 'Do you have high and consistent heart rate?', 'Yes', '41'),
+	(5, 'Do you have running nose?', 'no', '50'),
+	(5, 'Do you have running nose?', 'yes', '51'),
+	(6, 'Are you suffering from chills?', 'Burning Sensation while Urination', '61'),
+	(6, 'Are you suffering from chills?', 'Excess Sweating', '62'),
+	(6, 'Are you suffering from chills?', 'No Chills', '60'),
+	(7, 'Are you suffering from vomiting?', 'Acidic Vomiting(due to intestinal obstruction) for less than 1 week', '74'),
+	(7, 'Are you suffering from vomiting?', 'Acidic Vomiting(due to intestinal obstruction) for less than 3 days', '71'),
+	(7, 'Are you suffering from vomiting?', 'No Vomiting', '70'),
+	(7, 'Are you suffering from vomiting?', 'Normal Vomiting for less than 1 week', '75'),
+	(7, 'Are you suffering from vomiting?', 'Normal Vomiting for less than 3 days', '72'),
+	(7, 'Are you suffering from vomiting?', 'Sudden and forceful Vomiting for less than 1 week', '73'),
+	(7, 'Are you suffering from vomiting?', 'Sudden and forceful Vomiting for less than 3 days ', '76'),
+	(8, 'Do you have any urination related program?', 'Blood while Urination', '82'),
+	(8, 'Do you have any urination related program?', 'Dark Yellow color of Urine', '81'),
+	(8, 'Do you have any urination related program?', 'No', '80'),
+	(9, 'Do you feel any aches?', 'Body-ache', '91'),
+	(9, 'Do you feel any aches?', 'Head-ache', '92'),
+	(9, 'Do you feel any aches?', 'No aches', '90'),
+	(10, 'Do you have any Sore eyes related issues?', 'At Night', '102'),
+	(10, 'Do you have any Sore eyes related issues?', 'In Afternoon', '101'),
+	(10, 'Do you have any Sore eyes related issues?', 'In Morning', '103'),
+	(10, 'Do you have any Sore eyes related issues?', 'No Sore Eyes', '100'),
+	(11, 'Are you suffering from appetite loss?', 'Appetite loss from 1 Day', '113'),
+	(11, 'Are you suffering from appetite loss?', 'Appetite loss from 1 Month', '112'),
+	(11, 'Are you suffering from appetite loss?', 'Appetite loss from 1 Week', '111'),
+	(11, 'Are you suffering from appetite loss?', 'No Appetite Loss', '110'),
+	(12, 'Do you have neck pain?', 'No', '120'),
+	(12, 'Do you have neck pain?', 'Yes, I have neck-pain', '121'),
+	(13, 'Are you suffering from loose motion?', 'No', '130'),
+	(13, 'Are you suffering from loose motion?', 'Yes', '131'),
+	(14, 'Have you lost weight?', 'No', '140'),
+	(14, 'Have you lost weight?', 'Yes , lost weight!!', '141'),
+	(15, 'Do you have ear pain?', 'Ear pain with discharge from ear', '151'),
+	(15, 'Do you have ear pain?', 'no', '150'),
+	(15, 'Do you have ear pain?', 'yes suffering from ear pain', '152'),
+	(16, 'Are you sneezing more at a particular period?', 'Frequent sneeze in the morning', '162'),
+	(16, 'Are you sneezing more at a particular period?', 'no sneezing', '160'),
+	(16, 'Are you sneezing more at a particular period?', 'normal sneezing', '161'),
+	(17, 'Do you have stomach pain?', 'inconsistent/intermitted stomach pain', '172'),
+	(17, 'Do you have stomach pain?', 'no stomach pain', '170'),
+	(17, 'Do you have stomach pain?', 'persistance stomach pain!!', '171'),
+	(17, 'Do you have stomach pain?', 'Stomach pain in the right side', '173'),
+	(18, 'Do you have breathlessness?', 'no', '180'),
+	(18, 'Do you have breathlessness?', 'yes,I am suffering from breathlessness', '181'),
+	(19, 'Are you suffering from cough?', 'no', '190'),
+	(19, 'Are you suffering from cough?', 'yes,I am suffering from cough', '191'),
+	(20, 'Dou you extreme pain when touched at particular place?  ', 'no', '200'),
+	(20, 'Dou you extreme pain when touched at particular place?  ', 'yes', '201'),
+	(21, 'Do you have any pain', 'Back Pain', '212'),
+	(21, 'Do you have any pain', 'Chest pain', '211'),
+	(21, 'Do you have any pain', 'Joint Pain', '213'),
+	(21, 'Do you have any pain', 'No Pain', '210'),
+	(21, 'Do you have any pain', 'Throat Pain', '214'),
+	(22, 'Do you have Blurred vision?', 'no', '220'),
+	(22, 'Do you have Blurred vision?', 'yes', '221'),
+	(23, 'Do you have eruptions?', 'generalised', '231'),
+	(23, 'Do you have eruptions?', 'localised', '232'),
+	(23, 'Do you have eruptions?', 'no eruption', '230'),
+	(24, 'Do you feel hoarseness/change in your voice?', 'no', '240'),
+	(24, 'Do you feel hoarseness/change in your voice?', 'yes', '241'),
+	(25, 'Do you have swelled foot?', 'no', '250'),
+	(25, 'Do you have swelled foot?', 'yes', '251'),
+	(26, 'Do you hsve slower heart rate(<60bpm)', 'no', '260'),
+	(26, 'Do you hsve slower heart rate(<60bpm)', 'yes', '261');
+/*!40000 ALTER TABLE `questions` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.symptom
+CREATE TABLE IF NOT EXISTS `symptom` (
+  `symp_id` int(11) NOT NULL,
+  `symp_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`symp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.symptom: ~77 rows (approximately)
+/*!40000 ALTER TABLE `symptom` DISABLE KEYS */;
+INSERT INTO `symptom` (`symp_id`, `symp_name`) VALUES
+	(10, 'No Fever'),
+	(11, 'Morning'),
+	(12, 'Evening'),
+	(20, 'no'),
+	(21, 'Low Grade'),
+	(22, 'Moderate Grade'),
+	(23, 'spiking'),
+	(24, 'intermitted'),
+	(25, 'High Grade'),
+	(30, 'no'),
+	(31, 'yes'),
+	(40, 'no'),
+	(41, 'yes'),
+	(50, 'no'),
+	(51, 'yes'),
+	(60, 'No Chills'),
+	(61, 'Burning Sensation-Urine'),
+	(62, 'Sweating'),
+	(70, 'No Vomiting'),
+	(71, '<3 days,Bilious Vomiting'),
+	(72, '<3 days,Non-Bilious Vomiting'),
+	(73, '<1 Week,Projectile Vomiting'),
+	(74, '<1 Week,Bilious Vomiting'),
+	(75, '<1 Week,Non-Bilious Vomiting'),
+	(76, '<3 days,Projectile Vomiting'),
+	(80, 'No'),
+	(81, 'Dark Yellow Urine'),
+	(82, 'Blood with urine'),
+	(90, 'No ache'),
+	(91, 'Body-ache'),
+	(92, 'Head-ache'),
+	(100, 'No Sore Eyes'),
+	(101, 'Afternoon'),
+	(102, 'Night'),
+	(103, 'Morning'),
+	(110, 'No Appetite Loss'),
+	(111, '1 Week'),
+	(112, '1 Month'),
+	(113, '1 Day'),
+	(120, 'No'),
+	(121, 'Yes'),
+	(130, 'No'),
+	(131, 'Yes'),
+	(140, 'No'),
+	(141, 'Yes'),
+	(150, 'no'),
+	(151, 'discharge from ear'),
+	(152, 'yes'),
+	(160, 'no'),
+	(161, 'normal sneezing'),
+	(162, 'morning'),
+	(170, 'no'),
+	(171, 'persistance'),
+	(172, 'intermitted'),
+	(173, 'right'),
+	(180, 'no'),
+	(181, 'yes'),
+	(190, 'no'),
+	(191, 'yes'),
+	(200, 'no'),
+	(201, 'yes'),
+	(210, 'No Pain'),
+	(211, 'Chest pain'),
+	(212, 'Back Pain'),
+	(213, 'Joint Pain'),
+	(214, 'Throat Pain'),
+	(220, 'no'),
+	(221, 'yes'),
+	(230, 'no eruption'),
+	(231, 'generalised'),
+	(232, 'localised'),
+	(240, 'no'),
+	(241, 'yes'),
+	(250, 'no'),
+	(251, 'yes'),
+	(260, 'no'),
+	(261, 'yes');
+/*!40000 ALTER TABLE `symptom` ENABLE KEYS */;
+
+-- Dumping structure for table doctok.test
+CREATE TABLE IF NOT EXISTS `test` (
+  `test_id` varchar(45) NOT NULL,
+  `test_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`test_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+-- Dumping data for table doctok.test: ~0 rows (approximately)
+/*!40000 ALTER TABLE `test` DISABLE KEYS */;
+INSERT INTO `test` (`test_id`, `test_name`) VALUES
+	('0000', 'no test');
+/*!40000 ALTER TABLE `test` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

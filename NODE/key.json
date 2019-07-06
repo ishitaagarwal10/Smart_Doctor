@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "doctalk-translat-1551355918605",
+  "private_key_id": "1c7ca7426b7d9c1469f4b87616d2f93494033b85",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtlMqOFTRHwTv6\nDnPqy+lHe7mpVX3ga6Y9xqmhosnNfrCtNrTJ6L64Xgxf+/DnE1yyKzsjhLnlSR7+\n2BJT9XLTQAETwj7FJ8LY3kHp+9Q4ESzFZxs2XRAwxFiqKPM+3OjVhbyyL3joUzuP\nAnCmQ279LxCDvWjeRZAKUp+JfDliIjWZ8c0XgGSwejSXq/+7QAwpWO/LB2CW7UWq\nzTun1OuWitmYJfrqDz/FmIxiJlJ18HSLxRkPWuYN1siBG8xx07bUsqlU5/43+zSd\nD+OXQA7KiniKJxvUckBlqWxMOj15IfBqLt8xsZARVRRb+z5G/d6mjfOSC+Ny14jG\nma3736lFAgMBAAECggEAEw19bDoMmoGtzSUv+Qo3yVZdyyXsoqj+PtKjBPBi2TD6\nQJD8KBtpb8A2+IQlbZ+08YOIQr5LT00G328lF90dpO1mEN6l2CskmnxO3Nl88kiE\nUwidtophgBDVMJw9Et3ZmrJKw34tdcbJB0n7xmwpbxXu6J7uN1OIW3G1PDiL7ebn\n9KX4Acuu8aA8CUhsh08e42XsSy19GJOjbPTcXsdjY+f4pwR3ZPd9ZoZ6p5wBW9LM\nDycLjzUbe2DR235TRYeGmczZrW3Q+jvqdbvz4059jLMDc4V/EY34jgyInKa174/k\n+f0QNEB6QT4rZAkEo5OYSdZafDLsiukk1lsJOtO5kwKBgQDjlzq3isvpitgZTcBN\n0ciolE4AYIGR2hS6MIDNCAJIYUwvFYTwjRTDRqhMhmpGB+R32OD9couKNTkfJjzw\nQ/vwNPXJnW/XgMMQhTWqwNc7Q5zR/BvPC+ZPRz2qogR6vSNSe8LUu5diSGr6kOA2\nvBqKOlcNUdZ7wMGRpaLgW8PsywKBgQDDP6lpuQ7rKoCc4XRXMNB5ycpWNSGQq6GC\nJn9GefdSibwg24XayOuGwyoSscVfqGMlQLRJy95n1vfVFMGdiDmaDn0Hx0nNNfyG\nU9/JgpG4vZa46rdhh3khQB6LFafQ7JPsdbB8pqe6hrlb0ay8rjNRYeOTwbcmL0JD\nYBnjv3+QLwKBgDLZ0FnAHk2BI0WMFMKOc+oOsNrutSSUeHsdaTnmZzQq4S3H/hsN\nOq1i9SmcAtTA4LBSefrHBByORcQK9CSu2/TQsHYqwhmBgJQJX3NWgQCR29EjJkd9\nnijqfwHID34pEmJUmrSTcYCZM6XmhuJT5w4peNfWCDlAWT+kpZ7BgiY/AoGAK2g5\n18FGqc2XLkmJPeEiWBEepK/HOIyPqYm5fgebjoQEiSGEzrEge6Nj9SgEg1HCSQPr\nkQR7+4X1LzAgI0+nzrIt5c7Of4rjC1IWTIx0rSepHI9CGbKuoU/J+o3j8zTFZip8\nBBpg670L9HfW+VOZIRysJatJdnnHN4dj+hgW2g0CgYBqN5TJGKAlJ0kLB2HXUZnQ\nWfxsSv1TevqxSBDTa+lwBNM/hdssof2IJ8JyPqsyKswJriOZ2ooX29nuruptjI6t\nVZDyEZDtko/uROgbKI55cAbTvtiE7F39gRDuKgpqIGJW3+6fUdKM9S4LJ3t+TJw+\nEDh5eFX1o9RxL7X5hB5HwA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "doctalk@doctalk-translat-1551355918605.iam.gserviceaccount.com",
+  "client_id": "115828146612285312799",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/doctalk%40doctalk-translat-1551355918605.iam.gserviceaccount.com"
+}

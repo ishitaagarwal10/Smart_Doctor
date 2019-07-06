@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "doctalk-translat-1551355918605",
+  "private_key_id": "b47f5569f426dc0dbf48712f781c32c43a940c89",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHDD9yfW9gAzMg\nZMqlMT2hdCfUMhxFnodJIWA4dmSsdERox8aSmThqMWvmUd9BBgS+LEcEtPTWC+Fe\nrt+lRlkcOxqL2B2esEMeCSmQ9rT4+ockDoHiB73KdLpiTEILnTEXV01bcpZEOQC7\nDZndq2OuUOzi4hQ4ZvFgvidkft6Fx7QV5JLZ33Wp1CAAg5bYnVYA/3bPJ25AUFO3\nfAbWfTydt7FRjjrHWqs5DaKzxC42OS0I4+ZHVexnv7G89aHQN6Mq83kMsHZBOnXg\n/pLh0VcETiun8Su8+aQ7AUbMMkct0Iq/lZKH7c7dVT1cz4D2zDBTb/Mge2E4f/HU\nYpzt3dXNAgMBAAECggEATLxmi2tbMB8bqz3gN94rXd6Lak1lQ9uxWRqiXzIZbrim\nFOULo0Gpk5r494KRuJ4q3uvv9xsSFqDe4iM1uiBMQ0tv2QDYrnBSd7ZdjXLm4uOm\njNqA7RRB8Vad8j5m6dZQciiofHxI/QUiyHoeWuxzkeTF5lP1KqdZIAw+4InenKDp\nF3T+ZjHKnmTbdMzso27dF+6/LZS4sblHHnudxrwS1eO9gbvOyXwQ51+bNE7+nzPG\ndz7u77vUDvA4lBmpBRAWSZQeumR/PpTJU0FcV4pHbu+xJoTJJ39306OpMM0WwUpu\nX/LuhaSsO18Tt3UiLvkMvuuqAZZ989GrumdW8avT6wKBgQD9BASvLe9s/SSj80eK\nre4gwX9BKdPN+37evEQDQQBtKBOxACKtDcAad9abNp8hSN/XeiARvcqPe+j7dWM4\n16Lfj04RcWTDctSMHOQw5WChN+coIMuwvz9/ypQt7vkUb/jusb3qRuBBvKhg0pIK\nbb7ZtRhb3/8fn0av63ChR7atnwKBgQDJZUX///lJYhnmzMiazpS3ckFu5USlyAm9\nKrt2x9eM4pAnJpUOQaxVb20ZmKb0HGULqXMb0SW3hwik8JaEe7fx/g7URCuG10tF\nXhVKTXkN8B4pNpWaj4+5j8QKM/V+NCvnhCujz2+5rehVKnHkRKLEyITnVKn/n5Sb\nB1YwWPYtEwKBgHVeJNIia9tR/mozUy+IiVsWh3Jx9beqf2rRSHd98rWwDppf5rYC\nF+fvSVUM3HpzNKrfEvtH4Cv5HdVv2cwnc31jG6LJyCVGIkSwrkXkUZPXu9oIhJSD\n0u/zyBMatN5/JqmLN/7yS9sSqcToSSifShXxhNAxs0Y2+3JltASMoLgfAoGBALFE\n+UaKs4yKUy46VuEcsP6ADWRlXfVmjFv7vyKgaPTTf/tWFKGF4QEaoTeEjIAWdkK7\nllyHzeErdMpqErLui0zwSXFBx+ZanyCh3a+XXdSM5J92MlznvKSjDPXGInJBzdtt\nFVSNBFS15OkCAVnhqDv6HDHa7f/ZIV8MKCtKQvYNAoGBAMi8DGMtP34NynjJN6Om\nZDFjKi0W8WgGbgTsBAI3662+ApPsHlKQzIdeidsoP+z/EL2VU/owsin1Tn8YCTqk\n2qz70SkSsh3u/jRiIriDAx4rC3U7G2QQWvEODPLcnFuaLki9OwVlk0bLOP8xmh5W\nYmxDNDghLD03vfBDeIYXAhU5\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-82qtzon4lk83@doctalk-translat-1551355918605.iam.gserviceaccount.com",
+  "client_id": "118041689136842216344",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-82qtzon4lk83%40doctalk-translat-1551355918605.iam.gserviceaccount.com"
+}

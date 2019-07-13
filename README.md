@@ -11,4 +11,4 @@ as default.select the port no as 3306.Now give the db name and master user id an
 create security grp for port 3306 and give aceess as anywhere and select the default IP by going inside inbounds settings.
 ---------------------------------connecting RDS with local MySQL workbench--------------
 open new conn tab in mySQL workbench give the conn name any instead of localhost give the endpoint address of RDS instance and set the port as 3306
-and master id and password.this will allow to access the RDS instance and then run all the create table and insert command by using "code.txt" file.
+and master id and password.this will allow to access the RDS instance and then run all the create table and insert command using "code.txt" file.

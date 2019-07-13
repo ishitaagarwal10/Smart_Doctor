@@ -158,8 +158,8 @@ var imagename= async (function(req,res)
     
 AWS.config.setPromisesDependency(Promise);
 AWS.config=new AWS.Config();
-AWS.config.accessKeyId="AKIAIWPZ55MWIRR2M56A";
-AWS.config.secretAccessKey="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";
+AWS.config.accessKeyId=""; /////////////////////////enter own i'm deleting
+AWS.config.secretAccessKey="";
 AWS.config.region="us-east-1";
 
 var passportLocalMongoose=require("passport-local-mongoose");
